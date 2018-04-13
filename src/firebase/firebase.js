@@ -10,6 +10,23 @@ const config = {
 };
 firebase.initializeApp(config);
 
-firebase.database().ref().set({
-    name: 'John Cianciolo'
+const database = firebase.database();
+
+database.ref().set({
+    name: 'John Cianciolo',
+    age: 25,
+    isSingle: true,
+    location: {
+        city: 'Redwood City',
+        country: 'United States'
+    }
+});
+
+// database.ref().set('This is my data.');
+database.ref('age').set(26);
+database.ref('location/city').set('San Mateo');
+
+database.ref('attributes').set({
+    height: 75,
+    weight: 180
 });
