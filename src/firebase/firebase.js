@@ -1,4 +1,5 @@
 import * as firebase from 'firebase';
+import moment from 'moment';
 
 const config = {
     apiKey: "AIzaSyBNNr6hDZsLxeRCHYRXsWJVZBAPI9ws8ZM",
@@ -12,10 +13,39 @@ firebase.initializeApp(config);
 
 const database = firebase.database();
 
-database.ref().on('value', (snapshot) => {
-    const val = snapshot.val();
-    console.log(`${val.name} is a ${val.job.title} at ${val.job.company}`);
+database.ref('expenses').push({
+    description: 'lunch',
+    note: '',
+    amount: 500,
+    createdAt: 45315315151331
 });
+
+database.ref('expenses').push({
+    description: 'new hat',
+    note: '',
+    amount: 1500,
+    createdAt: 5315135135311
+});
+
+database.ref('expenses').push({
+    description: 'new TV',
+    note: '',
+    amount: 375000,
+    createdAt: 64264262464262
+});
+
+
+
+
+// database.ref('notes').push({
+//     title: 'Course Topics',
+//     body: 'React Native, Angular, Python'
+// });
+
+// database.ref().on('value', (snapshot) => {
+//     const val = snapshot.val();
+//     console.log(`${val.name} is a ${val.job.title} at ${val.job.company}`);
+// });
 
 // const onValueChange = database.ref().on('value', (snapshot) => {
 //     console.log(snapshot.val());
