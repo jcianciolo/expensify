@@ -1,9 +1,6 @@
-# Git Commands
+# Expensify App 
 
-git init - Create a new git repo
-git status - View the changes to the project code
-git add - Add files to staging area
-git commit - Creates a new commit with files from staging area
-git log - View recent commits
+This app was created using React to help users keep track of their expenses!
 
-sdsadssdsadsadasdasdsadssaddsadc
+Simply visit this url to login with Google and get started:
+https://john-cianciolo-expensify-app.herokuapp.com/
